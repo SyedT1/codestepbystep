@@ -19,4 +19,5 @@ int main(){
 	string m;
 	cin>>m;
 	cout<<tr[reco(m)]<<'\n';
+	return 0;
 }
