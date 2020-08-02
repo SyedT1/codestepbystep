@@ -1,4 +1,4 @@
-f(b = 2, p = 4){
+function f(b = 2, p = 4){
   if(p==0){
      return 1;
   }
