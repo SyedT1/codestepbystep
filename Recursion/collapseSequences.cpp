@@ -2,23 +2,20 @@
 using namespace std;
 using ll = long long int;
 string  collapseSequences(string x,char c){
-   if(x.size()==0) return "";
-   else if(x.size()==1) return x;
+   if(x.length()==0) return "";
+   else if(x.length()==1) return x;
    else{
    	  if(x[0]==x[1] && x[0]==c){
-   	  	 x.erase(x.begin());
-   	  	 return collapseSequences(x,c);
+   	  	 return collapseSequences(x.substr(1,x.length()-1),c);
    	  }else{
-   	  	 char ik = x[0];
-   	  	 x.erase(x.begin());
-   	  	 return ik+collapseSequences(x,c);
+   	  	 return x[0]+collapseSequences(x.substr(1,x.length()-1),c);
    	  }
    }
 }
 int main(){
-	string x;
 	char c;
+	string x;
 	cin>>x>>c;
 	cout<< collapseSequences(x,c)<<'\n';
-  return 0;
+        return 0;
 }
