@@ -1,4 +1,4 @@
-f(x=2345){
+function f(x=2345){
  if(x==0){
   return 0;
  }else{
