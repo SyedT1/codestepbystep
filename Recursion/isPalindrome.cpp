@@ -1,13 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 using ll = long long int;
-string tr[2]={"false","true"};
-bool reco(string x){
+bool isPalindrome(string x){
 	if(x.length()==1){
 	  return true;
 	}
 	if(tolower(x[0])==tolower(x[x.length()-1])){
-	    return x.length()==2?true:reco(x.substr(1,x.length()-2));
+	    return x.length()==2?true:isPalindrome(x.substr(1,x.length()-2));
 	}else{
 	   return false;
 	}
@@ -15,6 +14,6 @@ bool reco(string x){
  
 int main(){
 	string m;cin>>m;
-	cout<<tr[reco(m)]<<'\n';
+	cout<<isPalindrome(m)<<'\n';
 	return 0;
 }
